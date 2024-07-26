@@ -11,9 +11,9 @@ public class Account {
     @Column(unique = true)
     private String number;
     private String agency;
-    @Column(precision = 2, scale = 13)      //13 dígitos, 11 inteiros e 2 decimais
+    @Column(precision = 13, scale = 2)      //13 dígitos, 11 inteiros e 2 decimais
     private BigDecimal balance;
-    @Column(name = "addicional_limit", precision = 2, scale = 13)
+    @Column(name = "addicional_limit", precision = 13, scale = 2)
     private BigDecimal limit;
 
     public Long getId() {
