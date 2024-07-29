@@ -28,6 +28,11 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
+tasks.jar{
+	manifest{
+		attributes["Main-Class"] = "dio.apirest.spring_boot_ao_deploy.SpringBootAoDeployApplication"
+	}
+}
 tasks.named('test') {
 	useJUnitPlatform()
 }

@@ -1,9 +1,14 @@
 spring:
   datasource:
-    url: jdbc:postgresql://postgres:mddbYkvIKwxllAhzAwDpnQrYybKoTAdj@viaduct.proxy.rlwy.net:28624/railway
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
     username: ${PGUSER}
     password: ${PGPASSWORD}
   jpa:
     open-in-view: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: createp
+        ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
