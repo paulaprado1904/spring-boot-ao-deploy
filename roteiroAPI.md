@@ -268,7 +268,3 @@ public class UsuarioController {
     }
 }
 ```
-
-### 6. Executando a Aplicação
-
-Após configurar o projeto, executar a aplicação através da classe principal gerada pelo Spring Boot (geralmente chamada de `Application.java`). A API estará disponível para testes.
